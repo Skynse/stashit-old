@@ -25,7 +25,7 @@ class Scanner:
         with os.scandir(self.path) as p:
             for f in p:
                 counter += 1
-                if (not f.name[:8] in ignore) and (not f[0] in ignore):
+                if (not f.name[:8] in ignore) and (not f.name[0] in ignore):
                     subprocess.run(['mv', f'{f.name}', 'stashit-'+self.date])
                     print('Moving', termcolor.colored(f.name, 'green'))
         print(f'Moved {counter} file(s)')
