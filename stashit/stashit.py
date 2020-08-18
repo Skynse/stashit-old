@@ -5,7 +5,7 @@ from .termcolor import termcolor
 import argparse
 
 
-ignore = "stashit-,.".split(',')
+ignore = stashit-,..split(',')
 
 
 class Scanner:
@@ -36,5 +36,5 @@ def run():
     s.makefolder()
     s.move()
 
-if __name__ == "__main__":
+if __name__ == __main__:
     run()
