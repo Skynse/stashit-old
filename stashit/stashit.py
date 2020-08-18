@@ -5,7 +5,7 @@ from .termcolor import termcolor
 import argparse
 
 
-ignore = stashit-,..split(',')
+ignore = 'stashit-,.'.split(',')
 
 
 class Scanner:
