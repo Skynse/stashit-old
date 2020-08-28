@@ -1,8 +1,6 @@
-from .utils.utils import get_date, debug, gen_files, create_folder
+from .utils.utils import get_date, debug, create_folder
 import os
-import subprocess
 from .termcolor import termcolor
-import argparse
 import pathlib
 import shutil
 
@@ -31,12 +29,14 @@ class Scanner:
                     str(pathlib.Path.cwd()) != str(pathlib.Path.home())
                 ):
                     can_run = True
-                    folder = "stashit-"+self.date
-                    shutil.move(f'./{f.name}', f'./{folder}/') # allows for cross platform usage 
+                    folder = "stashit-" + self.date
+                    shutil.move(
+                        f"./{f.name}", f"./{folder}/"
+                    )  # allows for cross platform usage
                     print("Moving", termcolor.colored(f.name, "green"))
                 else:
                     can_run = False
-        if can_run == True:
+        if can_run is True:
             print(f"Moved {counter} file(s)")
         else:
             print("Cannot run stashit in this directory")
