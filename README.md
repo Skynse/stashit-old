@@ -2,7 +2,7 @@
 
 Simple tool that moves files to datetime based folder depending on where the script was run
 
-![preview 1](imgs/gif1.gif)
+![preview 1](imgs/stashit.gif)
 
 ## Installation
 Linux
